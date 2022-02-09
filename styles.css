@@ -1,0 +1,25 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-container {
+  display: flex;
+}
+
+.grid-box {
+  height: 16px;
+  width: 16px;
+  border: 1px solid black;
+}
+
+.fill {
+  background-color: black;
+}
