@@ -1,8 +1,8 @@
-const gridSize = 800;
+const gridSize = 640;
 
 function resetBoard() {
     const squaresPerSide = prompt("How many squares would you like per side?");
-    drawBoard(squaresPerSide);
+    if (squaresPerSide) drawBoard(squaresPerSide);
 }
 
 function drawBoard(squaresPerSide) {    
