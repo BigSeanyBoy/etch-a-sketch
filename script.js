@@ -2,7 +2,10 @@ const gridSize = 640;
 
 function resetBoard() {
     const squaresPerSide = prompt("How many squares would you like per side?");
-    if (squaresPerSide) drawBoard(squaresPerSide);
+    if (squaresPerSide < 16 && squaresPerSide) drawBoard(16)
+    else if (squaresPerSide > 100) drawBoard(100);
+    else if (squaresPerSide) drawBoard(squaresPerSide);
+    else drawBoard(document.querySelectorAll('.grid-box').length ** 0.5);
 }
 
 function drawBoard(squaresPerSide) {    
@@ -14,7 +17,6 @@ function drawBoard(squaresPerSide) {
     for (let i = 0; i < squaresPerSide; i++) {
         const rowContainer = document.createElement("div");
         rowContainer.classList.add("row-container");
-        console.log(rowContainer);
 
         for (let j = 0; j < squaresPerSide; j++) {
             const gridBox = document.createElement("div");
